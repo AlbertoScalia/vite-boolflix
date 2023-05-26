@@ -11,21 +11,19 @@ export default {
 };
 </script>
 <template>
-    <div class="container">
-    <div class="input-group my-3">
+    <div class="input-group ms-auto">
       <label class="input-group-text" for="search_input" @click="$emit('searchMovie')"
-        >Search
+        ><font-awesome-icon icon="fa-solid fa-magnifying-glass" />
       </label>
+      <!-- @keyup="$emit('searchMovie')" -->
       <input
         type="text"
         class="form-control"
         id="search_input"
         placeholder="Search film.."
         v-model="store.query"
-        @keyup="$emit('searchMovie')"
       />
     </div>
-  </div>
 </template>
 
 <style lang="scss" scoped></style>
